@@ -14,7 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('images', function (Blueprint $table) {
-            $table->id();
+            $table->integer('image_id')->autoIncrement();
+            $table->string('title');
+            $table->string('description');
+            $table->string('url');
             $table->timestamps();
         });
     }
